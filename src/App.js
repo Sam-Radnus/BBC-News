@@ -6,6 +6,7 @@ import MustSee from './Components/MustSee';
 import AroundTheBBC from './Components/AroundTheBBC';
 import MostRead from './Components/MostRead';
 import Sport from './Components/Sport';
+import FindUs from './Components/FindUs';
 export default class App extends Component {
   render() {
     return <div>
@@ -16,6 +17,7 @@ export default class App extends Component {
       <MostRead/>
       <AroundTheBBC/>
       <Sport/>
+      <FindUs/>
     </div>;
   }
 }
