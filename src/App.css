@@ -1,3 +1,85 @@
-a{
-  font-weight: bolder;
+
+div.container i
+{
+   font-size:50px;
+   height:100px;
+   width: 100px;
+   padding-top:25px;
+   padding-left:25px;
+    
+}
+i[class="fab fa-youtube"]
+{
+  color:red;
+}
+i[class="fab fa-twitter"]
+{
+  color:rgb(29,161,242);
+}
+i[class="fab fa-instagram"]
+{
+  color:rgb(217,49,117);
+}
+i[class="fab fa-facebook-f"]
+{
+  
+  color:rgb(61,90,152);
+}
+i[class="fab fa-youtube"]:hover
+{
+  color:white;
+  background-color:red;
+}
+i[class="fab fa-twitter"]:hover
+{
+  color:white;
+  background-color:rgb(29,161,242);
+}
+i[class="fab fa-instagram"]:hover
+{
+  color:white;
+  background-color:rgb(217,49,117);
+}
+i[class="fab fa-facebook-f"]:hover
+{
+  color:white;
+  background-color:rgb(61,90,152);
+}
+div#grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+}
+div.gridMe{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+div.envelope{
+
+  width:240px;
+}
+div.newsDaily{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ 
+}
+div.container a{
+   text-decoration: none;
+   color:rgb(90,90,90);
+   font-weight: bolder;
+}
+@media only screen and (max-width:1250px)  {
+ 
+  div#grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  div.container i
+{
+   font-size:25px;
+   height:50px;
+   width: 50px;
+   padding-top:12.5px;
+   padding-left:12.5px;
+    
+}
 }
