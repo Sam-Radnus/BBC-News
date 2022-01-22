@@ -18,17 +18,17 @@ export default class App extends Component {
       <TopNav />
       <Router>
         <Navbar />
-        <Headlines />
-           <MustSee />
-           <MostRead />
-           <AroundTheBBC />
-           <Sport />
-           <FindUs />
+        
         <Routes>
         
         
-        <Route exact path="/Home">
-          
+        <Route exact path="" element={<>
+                   <Headlines />
+                   <MustSee />
+                   <MostRead />
+                   <AroundTheBBC />
+                   <Sport />
+                   <FindUs />  </>   }>
           </Route> 
         <Route exact path="/Business" element={<News key="Business" apiKey={this.apiKey} pageSize={this.pageSize} category="business"></News>}></Route>
         <Route exact path="/Entertainment" element={<News key="Entertainment" apiKey={this.apiKey} pageSize={this.pageSize} category="entertainment"></News>}></Route>

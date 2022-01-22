@@ -29,9 +29,9 @@ export default class extends Component {
     render() {
 
         return <div className="container">
-            <div className="row">
+            <div className="row row-cols-5">
                 {this.state.articles.map((element) => {
-                    return <div className="col-md-4" key={element.url}>
+                    return <div className="col" key={element.url}>
                         <h1>{element.category}</h1>
                          <NewsItems title={element.title} description={element.description} 
                                  imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
