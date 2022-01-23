@@ -12,14 +12,18 @@ export default class Sport extends Component {
     }
     async componentDidMount()
     {
+          this.props.progress(10);
         const url="https://newsapi.org/v2/top-headlines?country=gb&category=sport&sortBy=popularity&apiKey=a70c1839ba1c41c5b29461feee78b4af"
         let data=await fetch(url);
+          this.props.progress(30);
         let parsedData=await data.json();
         console.log("Hi");
         console.log(parsedData);
+         this.props.progress(50);
         this.setState({
             articles:parsedData.articles
         })
+         this.props.progress(100);
     }
   render() {
     return <div>
