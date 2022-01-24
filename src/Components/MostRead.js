@@ -28,7 +28,7 @@ async componentDidMount()
          <div class="row row-cols-2">
                 {this.state.articles.map((element,index)=>
                     {
-                        return <div className="col">
+                        return <div  key={element.title} className="col">
                          <Read index={index} title={element.title} newsURL={element.url} />
                         </div>
                     })}        

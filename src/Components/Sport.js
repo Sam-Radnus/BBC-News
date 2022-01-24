@@ -19,7 +19,7 @@ export default class Sport extends Component {
         console.log(parsedData);
         this.setState({
             articles:parsedData.articles
-        })
+        }) 
     }
   render() {
     return <div>
@@ -27,7 +27,7 @@ export default class Sport extends Component {
                 <h1>Sports</h1>
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
-                            return <div className="col">
+                            return <div className="col" key={element.title}>
                             <TopNews title={element.title} description={element.description} 
                             imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
                             author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
@@ -37,7 +37,7 @@ export default class Sport extends Component {
                         
                          {this.state.articles.slice(1,9).map((element)=>
                          {
-                             return <div className="col">
+                             return <div key={element.title} className="col">
                                  <NewsItems title={element.title} description={element.description} 
                                  imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
                                  author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
