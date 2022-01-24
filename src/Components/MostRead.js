@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Read from './Read';
+import '../App.css';
 export default class MostRead extends Component {
     articles=[]
 constructor()
@@ -24,8 +25,8 @@ async componentDidMount()
   render() {
     return <div>
        <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
-           <h1>Most Read</h1>
-         <div class="row row-cols-2">
+           <h1 id="line"><span>Most Read</span></h1>
+         <div className="row row-cols-2">
                 {this.state.articles.map((element,index)=>
                     {
                         return <div  key={element.title} className="col">

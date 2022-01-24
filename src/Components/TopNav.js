@@ -38,16 +38,7 @@ export default class TopNav extends Component {
                             <li className="nav-item">
                                 <a className="nav-link " aria-current="page">Culture</a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Link
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a className="dropdown-item">Action</a></li>
-                                    <li><a className="dropdown-item">Another action</a></li>
-                                    <li><a className="dropdown-item">Something else here</a></li>
-                                </ul>
-                            </li>
+                            
                          
                         </ul>  }
                         <form className="d-flex">

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import NewsItems from './NewsItems';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import '../App.css';
+
 export default class extends Component {
     articles = []
     static defaultProps={

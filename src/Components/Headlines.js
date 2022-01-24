@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NewsItems from './NewsItems';
 import TopNews from './TopNews';
+import '../App.css';
+
 export default class Headlines extends Component {
     static defaultProps={
         country:'gb'
@@ -27,7 +29,7 @@ export default class Headlines extends Component {
         return <div>
             
             <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}} className="container">
-                <h1>Top Headlines</h1>
+                <h1 id="line"><span>Top Headlines</span></h1>
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
                             return <div className="col"  key={element.title} >

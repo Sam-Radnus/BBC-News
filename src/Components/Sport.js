@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopNews from './TopNews';
 import NewsItems from './NewsItems';
+import '../App.css';
 export default class Sport extends Component {
     articles=[]
     constructor()
@@ -24,7 +25,7 @@ export default class Sport extends Component {
   render() {
     return <div>
           <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
-                <h1>Sports</h1>
+                <h1 id="line"><span>Sports</span></h1>
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
                             return <div className="col" key={element.title}>
