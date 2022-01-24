@@ -42,7 +42,7 @@ export default class extends Component {
     fetchMoreData=async()=>
 
     {
-           this.props.setProgress(10);
+         
         this.setState({page:this.state.page+1})
          let url = `https://newsapi.org/v2/top-headlines?country=gb&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
@@ -68,7 +68,7 @@ export default class extends Component {
            />
             <div className="row row-cols-5">
                 {this.state.articles.map((element) => {
-                    return <div className="col" key={element.url}>
+                    return <div className="col" key={element.title}>
                         <h1>{element.category}</h1>
                          <NewsItems title={element.title} description={element.description} 
                                  imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
