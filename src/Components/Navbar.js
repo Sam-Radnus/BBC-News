@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import Photo from './BBC.png';
 export default class Navbar extends Component {
-    async componentDidMount()
-    {
-        console.log("Navbar Created");
-    }
+   
     render() {
 
         return <div>
@@ -18,40 +16,31 @@ export default class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link active"  to="">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Business</a>
+                                <Link className="nav-link active"  to="/Business">Business</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Entertainment</a>
+                                <Link className="nav-link active"  to="/Entertainment">Entertainment</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">General</a>
+                                <Link className="nav-link active"  to="/General">General</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Health</a>
+                                <Link className="nav-link active"  to="/Health">Health</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Science</a>
+                                <Link className="nav-link active"  to="/Science">Science</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Sports</a>
+                                <Link className="nav-link active"  to="/Sports">Sports</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Technology</a>
+                                <Link className="nav-link active"  to="/Technology">Technology</Link>
                             </li>
                          
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
