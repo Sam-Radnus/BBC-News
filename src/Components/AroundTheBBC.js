@@ -22,7 +22,6 @@ export default class AroundTheBBC extends Component {
     }
   render() {
     return <div>
-     
      <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
         <h1 id="line"><span>Around the BBC</span></h1>
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>

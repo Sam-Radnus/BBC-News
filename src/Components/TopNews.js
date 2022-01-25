@@ -20,7 +20,6 @@ export default class TopNews extends Component {
     render() {
         let {title,description,imageURL,newsURL,author,date}=this.props
         return (
-        <div className="col">
             <div className="card mb-3" >
                 <div className="row g-0">
                     <div className="col-md-4">
@@ -35,7 +34,6 @@ export default class TopNews extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
             
         )

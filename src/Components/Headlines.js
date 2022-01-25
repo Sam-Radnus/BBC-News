@@ -24,18 +24,9 @@ export default class Headlines extends Component {
         console.log(parsedData);
         this.setState({articles:parsedData.articles})
     }
-<<<<<<< HEAD
     render() {
         return <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
-                <h1>Top Headlines</h1>
-=======
-
-    render(props) {
-        return <div>
-            
-            <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}} className="container">
                 <h1 id="line"><span>Top Headlines</span></h1>
->>>>>>> f49faee5d39d3c989dfa23b46377cb8149e3627d
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
                             return <div className="col"  key={element.title} >
@@ -44,7 +35,7 @@ export default class Headlines extends Component {
                             author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
                         </div>
                           })}  </div>
-                    <div className="row row-cols-4">
+                    <div className="row row-cols-4" >
                         
                          {this.state.articles.slice(1,9).map((element)=>
                          {
