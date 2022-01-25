@@ -22,11 +22,8 @@ export default class Headlines extends Component {
         console.log(parsedData);
         this.setState({articles:parsedData.articles})
     }
-
-    render(props) {
-        return <div>
-            
-            <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
+    render() {
+        return <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
                 <h1>Top Headlines</h1>
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
@@ -48,7 +45,6 @@ export default class Headlines extends Component {
                          })
                         }
                    </div>
-            </div>
         </div>;
     }
 }

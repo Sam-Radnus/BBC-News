@@ -18,9 +18,9 @@ export default class TopNews extends Component {
         width:'100'
     }
     render() {
-        let {title,description,imageURL,newsURL,author,data,source}=this.props
+        let {title,description,imageURL,newsURL,author,date}=this.props
         return (
-        <div>
+        <div className="col">
             <div className="card mb-3" >
                 <div className="row g-0">
                     <div className="col-md-4">
@@ -31,6 +31,7 @@ export default class TopNews extends Component {
                         <a onMouseOver={this.underLine} onMouseOut={this.NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}> <h5 className="card-title">{title}</h5></a>
                             <p className="card-text">{description}</p>
                             <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                            <p><strong>Written By:-</strong>{author}on {new Date(date).toGMTString()}</p>
                         </div>
                     </div>
                 </div>
