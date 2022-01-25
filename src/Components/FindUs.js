@@ -14,20 +14,20 @@ export default class FindUs extends Component {
   youtube = 'rgb(255,0,0)';
   render() {
     return <div className="container">
-      <h1>Find Us Here</h1>
+      <h1 id="line"><span>Find Us Here</span></h1>
       <div className="row row-cols-4">
         <div style={this.Flex} id="grid" className="col">
-          <div className="gridMe"> <i logo="facebook" class="fab fa-facebook-f"></i>
-            <i logo="youtube" class="fab fa-youtube"></i>
-            <i logo="twitter" class="fab fa-twitter"></i>
-            <i logo="instagram" class="fab fa-instagram"></i></div>
+          <div className="gridMe"> <i logo="facebook" className="fab fa-facebook-f"></i>
+            <i logo="youtube" className="fab fa-youtube"></i>
+            <i logo="twitter" className="fab fa-twitter"></i>
+            <i logo="instagram" className="fab fa-instagram"></i></div>
           <div className="newsDaily">
 
-            <div className="envelope"><i class="fas fa-envelope-open-text"></i>
+            <div className="envelope"><i className="fas fa-envelope-open-text"></i>
               <h1>NEWS DAILY</h1> <a href="https://www.bbc.co.uk/programmes/articles/4g8c0mkNmM190Zl00VdXTTb/bbc-news-daily-email">Get News from the BBC in your inbox each weekday morning</a>
             </div>
         
-          <div className="envelope"> <i class="fas fa-mobile-alt"></i>
+          <div className="envelope"> <i className="fas fa-mobile-alt"></i>
             <h1>NEWS App</h1> <a href="https://www.bbc.co.uk/programmes/articles/4g8c0mkNmM190Zl00VdXTTb/bbc-news-daily-email">Find out more bout our BBC News App</a>
           </div>
           </div>

@@ -1,4 +1,6 @@
-
+*{
+  font-family:Arial, Helvetica, freesans, sans-serif;
+}
 div.container i
 {
    font-size:50px;
@@ -6,7 +8,7 @@ div.container i
    width: 100px;
    padding-top:25px;
    padding-left:25px;
-    
+   cursor:pointer;
 }
 i[class="fab fa-youtube"]
 {
@@ -82,4 +84,35 @@ div.container a{
    padding-left:12.5px;
     
 }
+}
+h1[id="line"]
+{ 
+  font-size: 1rem;
+  position: relative;
+  font-family:Arial, Helvetica, freesans, sans-serif;
+  font-size: 24px;
+  
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: rgb(34, 34, 34);
+  text-align: left;
+  text-indent: 0px;
+
+}
+h1[id="line"] span{
+  background-color: white;
+  padding-right: 10px;
+}
+
+h1[id="line"]::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+  border-top: 1px solid black;
+  z-index: -1;
 }

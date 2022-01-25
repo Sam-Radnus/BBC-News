@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TopNews from './TopNews';
 import PropTypes from 'prop-types'
 import NewsItems from './NewsItems';
+import '../App.css';
 export default class Sport extends Component {
     articles=[]
     constructor(props)
@@ -15,7 +16,10 @@ export default class Sport extends Component {
  
     async componentDidMount()
     {
+<<<<<<< HEAD
        
+=======
+>>>>>>> f49faee5d39d3c989dfa23b46377cb8149e3627d
         const url="https://newsapi.org/v2/top-headlines?country=gb&category=sport&sortBy=popularity&apiKey=a70c1839ba1c41c5b29461feee78b4af"
         let data=await fetch(url);
         let parsedData=await data.json();
@@ -23,6 +27,7 @@ export default class Sport extends Component {
         console.log(parsedData);
         this.setState({
             articles:parsedData.articles
+<<<<<<< HEAD
         })
          
     }
@@ -32,6 +37,17 @@ export default class Sport extends Component {
                     <div className="row"> {this.state.articles.slice(0,1).map((element)=>
                           {
                             return <div key={element} className="col">
+=======
+        }) 
+    }
+  render() {
+    return <div>
+          <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
+                <h1 id="line"><span>Sports</span></h1>
+                    <div className="row"> {this.state.articles.slice(0,1).map((element)=>
+                          {
+                            return <div className="col" key={element.title}>
+>>>>>>> f49faee5d39d3c989dfa23b46377cb8149e3627d
                             <TopNews title={element.title} description={element.description} 
                             imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
                             author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
@@ -40,7 +56,11 @@ export default class Sport extends Component {
                     <div className="row row-cols-4">  
                          {this.state.articles.slice(1,9).map((element)=>
                          {
+<<<<<<< HEAD
                              return <div className="col" >
+=======
+                             return <div key={element.title} className="col">
+>>>>>>> f49faee5d39d3c989dfa23b46377cb8149e3627d
                                  <NewsItems title={element.title} description={element.description} 
                                  imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
                                  author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
