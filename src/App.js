@@ -7,6 +7,7 @@ import AroundTheBBC from './Components/AroundTheBBC';
 import MostRead from './Components/MostRead';
 import Sport from './Components/Sport';
 import FindUs from './Components/FindUs';
+import Modal from './Components/Secondary/Modal';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import News from './Components/News';
@@ -24,8 +25,9 @@ export default class App extends Component {
   render() {
   
     return <div>
-      <TopNav />
+  
       <Router>
+      <TopNav />
         <Navbar />
         <LoadingBar
           color='#f11946'
@@ -48,6 +50,7 @@ export default class App extends Component {
         <Route exact path="/Science"       element={<News key="Science"       setProgress={this.setProgress} apiKey={this.apiKey} pageSize={this.pageSize} category="science"></News>}></Route>
         <Route exact path="/Sports"        element={<News key="Sports"        setProgress={this.setProgress} apiKey={this.apiKey} pageSize={this.pageSize} category="sports"></News>}></Route>
         <Route exact path="/Technology"    element={<News key="Technology"    setProgress={this.setProgress} apiKey={this.apiKey} pageSize={this.pageSize} category="technology"></News>}></Route>
+        <Route exact path="/Sign-In"       element={<Modal></Modal>}></Route>
         </Routes>
    
       </Router>
