@@ -7,10 +7,10 @@ export default class TopNav extends Component {
         return <div>
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <img src={Photo} className="ms-4" height="40" width="120" alt="BBC" />
+            <Link to="/"><img src={Photo} className="ms-4" height="40" width="120" alt="BBC" /></Link>
                 <div className="container-fluid">
                     <i className="fas fa-user-circle"></i>
-                    <Link to="/Sign-In">Sign in</Link>
+                    <Link style={{textDecoration:'none',color:'black'}}to="/Sign-In">Sign in</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
