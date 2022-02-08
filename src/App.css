@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rowdies:wght@700&family=Secular+One&display=swap');
 *{
   font-family:Arial, Helvetica, freesans, sans-serif;
 }
+
 div.container i
 {
    font-size:50px;
@@ -124,6 +126,28 @@ h1[id="line"]::after{
   left: 0;
   right: 0;
   height: 0.5em;
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(167, 45, 45);
   z-index: -1;
+}
+nav.navbar{
+  height:'fit-content';
+  background-color: 'blue';
+}
+div.collapse{
+   padding-left: 150px;
+    
+}
+ul.navbar-nav  li a{
+  border-style:'solid';
+  font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+  font-weight:700;
+}
+ul#topNav li{
+  border-right-style: solid;
+  padding:0px 4px 0px 4px;
+  border-width:1px;
+  border-color:grey;
+}
+nav.navbar#topNav{
+  height:45px;
 }
