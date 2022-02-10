@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import Photo from './BBC.png';
-export default class Navbar extends Component {
-   
-    render() {
 
+export  const Navbar=()=> {
+     
+    let location = useLocation();
+    React.useEffect(() => {
+    console.log(location);
+    }, [location]);
         return <div>
             <nav style={{backgroundColor: "rgb(187,25,25)"}} className="navbar navbar-expand-lg navbar-dark ">
                 <div className="container-fluid">
@@ -16,28 +20,28 @@ export default class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="">Home</Link>
+                                <Link className="nav-link "  to="">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Business">Business</Link>
+                                <Link className={`nav-link ${location.pathname==="/Business"?"active":""}`}  to="/Business">Business</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Entertainment">Entertainment</Link>
+                                <Link className={`nav-link ${location.pathname==="/Entertainment"?"active":""}`}  to="/Entertainment">Entertainment</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/General">General</Link>
+                                <Link className={`nav-link ${location.pathname==="/General"?"active":""}`}  to="/General">General</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Health">Health</Link>
+                                <Link className={`nav-link ${location.pathname==="/Health"?"active":""}`}  to="/Health">Health</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Science">Science</Link>
+                                <Link className={`nav-link ${location.pathname==="/Science"?"active":""}`}  to="/Science">Science</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Sports">Sports</Link>
+                                <Link className={`nav-link ${location.pathname==="/Sports"?"active":""}`}  to="/Sports">Sports</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active"  to="/Technology">Technology</Link>
+                                <Link className={`nav-link ${location.pathname==="/Technology"?"active":""}`}  to="/Technology">Technology</Link>
                             </li>
                          
                             
@@ -46,5 +50,5 @@ export default class Navbar extends Component {
                 </div>
             </nav>
         </div>;
-    }
+    
 }

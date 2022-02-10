@@ -137,7 +137,10 @@ div.collapse{
    padding-left: 150px;
     
 }
-ul.navbar-nav  li a{
+ul.navbar-nav  li a[class="nav-link "],Link[class="nav-link "]{
+   color:white;
+}
+ul.navbar-nav  li a[class="nav-link active"],Link[class="nav-link active"]{
   border-style:'solid';
   font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
   font-weight:700;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Components/Navbar';
+import {Navbar} from './Components/Navbar';
 import TopNav from './Components/TopNav';
 import Headlines from './Components/Headlines';
 import MustSee from './Components/MustSee';
