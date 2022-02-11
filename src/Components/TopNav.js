@@ -45,8 +45,8 @@ export default class TopNav extends Component {
 
                         </ul>
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{borderRadius:'0px',fontWeight:'700',backgroundColor:'rgb(228,228,228'}} />
+                            <button className='btn btn-danger' ><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                     </div>
                 </div>

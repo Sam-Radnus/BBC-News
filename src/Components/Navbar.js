@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import Photo from './BBC.png';
-
+import '../App.css';
 export  const Navbar=()=> {
      
     let location = useLocation();
@@ -20,7 +20,7 @@ export  const Navbar=()=> {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link "  to="">Home</Link>
+                                <Link className={`nav-link ${location.pathname==="/"?"active":""}`}   to="">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className={`nav-link ${location.pathname==="/Business"?"active":""}`}  to="/Business">Business</Link>

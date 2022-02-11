@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rowdies:wght@700&family=Secular+One&display=swap');
 *{
-  font-family:Arial, Helvetica, freesans, sans-serif;
+  font-family:ReithSans, Arial, Helvetica, freesans, sans-serif;
 }
 
 div.container i
@@ -91,7 +91,7 @@ h1[id="line"]
 { 
   font-size: 1rem;
   position: relative;
-  font-family:Arial, Helvetica, freesans, sans-serif;
+  font-family:ReithSans, Arial, Helvetica, freesans, sans-serif;
   font-size: 24px;
   
   font-weight: 700;
@@ -104,7 +104,7 @@ h1[id="line"]
 
 }
 h1{
-  font-family:Arial, Helvetica, freesans, sans-serif;
+  font-family:ReithSans, Arial, Helvetica, freesans, sans-serif;
   font-size: 24px;
   font-weight: 700;
   font-style: normal;

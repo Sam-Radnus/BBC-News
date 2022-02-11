@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../App.css';
 export default class TopNews extends Component {
     underLine=(e)=>
     {
@@ -9,9 +10,8 @@ export default class TopNews extends Component {
     }
     NotUnderLine=(e)=>
     {
-        let x=document.querySelector('h5');
+      let x=document.querySelector('h5');
        x.style.textDecoration='none';
-    
     }
     myStyle={
         height:'100',
