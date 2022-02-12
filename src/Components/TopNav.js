@@ -3,8 +3,7 @@ import Photo from './BBC.png';
 import 'font-awesome/css/font-awesome.min.css';
 import {Link } from 'react-router-dom';
 import '../App.css';
-export default class TopNav extends Component {
-    render() {
+export const TopNav =()=> {
         return <div>
 
             <nav  id="topNav" className="navbar navbar-expand-lg navbar-light bg-light" >
@@ -52,5 +51,5 @@ export default class TopNav extends Component {
                 </div>
             </nav>
         </div>;
-    }
+    
 }

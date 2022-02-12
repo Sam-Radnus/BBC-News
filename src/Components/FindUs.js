@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-export default class FindUs extends Component {
-  myStyle = {
+export const FindUs=()=>{
+  let myStyle = {
     fontSize: 'xx-large',
     marginLeft: '10px'
   }
 
-  white = 'white';
-  facebook = 'rgb(61,90,152)';
-  instagram = 'rgb(217,49,117)';
-  twitter = 'rgb(29,161,242)';
-  youtube = 'rgb(255,0,0)';
-  render() {
+ let  white = 'white';
+ let facebook = 'rgb(61,90,152)';
+ let instagram = 'rgb(217,49,117)';
+ let twitter = 'rgb(29,161,242)';
+ let youtube = 'rgb(255,0,0)';
     return <div className="container">
       <h1 id="line"><span>Find Us Here</span></h1>
       <div className="row row-cols-4">
-        <div style={this.Flex} id="grid" className="col">
+        <div  id="grid" className="col">
           <div className="gridMe"> <i logo="facebook" className="fab fa-facebook-f"></i>
             <i logo="youtube" className="fab fa-youtube"></i>
             <i logo="twitter" className="fab fa-twitter"></i>
@@ -39,5 +38,5 @@ export default class FindUs extends Component {
         </div>
       </div>
     </div>;
-  }
+  
 }

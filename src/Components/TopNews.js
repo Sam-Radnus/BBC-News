@@ -6,12 +6,13 @@ export default class TopNews extends Component {
     {
        let x=document.querySelector('h5');
        x.style.textDecoration='underline';
-      
+       x.style.color='rgb(19,128,161)';
     }
     NotUnderLine=(e)=>
     {
       let x=document.querySelector('h5');
        x.style.textDecoration='none';
+       x.style.color='rgb(34,34,34)';
     }
     myStyle={
         height:'100',

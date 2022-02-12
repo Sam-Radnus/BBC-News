@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-
+import '../App.css';
 export default class NewsItems extends Component {
     underLine=(e)=>
     {
       
        e.target.style.textDecoration='underline';
+       e.target.style.color='rgb(19,128,161)';
       
     }
     NotUnderLine=(e)=>
     {
        e.target.style.textDecoration='none';
+       e.target.style.color='rgb(34,34,34)';
     
     }
     myStyle={
