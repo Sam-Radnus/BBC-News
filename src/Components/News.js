@@ -1,75 +1,52 @@
-import React, { Component } from 'react';
+import React, { Component,useState,useEffect } from 'react';
 import PropTypes from 'prop-types'
-import NewsItems from './NewsItems';
+import {NewsItems} from './NewsItems';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import '../App.css';
 
-export default class extends Component {
-    articles = []
-    static defaultProps={
-        country:'gb',
-        pageSize:8
-    }
-    static propTypes = {
-        pageSize: PropTypes.number,
-        country:PropTypes.string,
-        category: PropTypes.string
-    }
-    constructor(props) {
-        super(props)
-        this.props.setProgress(10);
-        this.state = {
-            articles: [],
-            page:1,
-            totalResults:0,
-            apiKey: 'a70c1839ba1c41c5b29461feee78b4af'
-        }
-           this.props.setProgress(100);
-    }
-    async componentDidMount() {
-        this.props.setProgress(10);
-        const url = `https://newsapi.org/v2/top-headlines?country=gb&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+export const News =(props)=> {
+    const [articles, setArticles] = useState([]);
+    const [page, setPage] = useState(1);
+    const [totalResults,setTotalResults]=useState(0);
+    //   let  componentDidMount=async()=>
+    useEffect(async () => {
+        props.setProgress(10);
+       // const url = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=a70c1839ba1c41c5b29461feee78b4af"
+      //  const url="https://newsapi.org/v2/everything?q=olympics&sortBy=relevancy&apiKey=a70c1839ba1c41c5b29461feee78b4af"
+        const url = `https://newsapi.org/v2/top-headlines?country=gb&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+        props.setProgress(30);
         let data = await fetch(url);
-        this.props.setProgress(30);
-        console.log(data);
         let parsedData = await data.json();
+        props.setProgress(70);
         console.log(parsedData);
-        this.props.setProgress(50);
-        this.setState({
-            articles: parsedData.articles,
-            totalResults: parsedData.totalResults
-        })
-        this.props.setProgress(100);
-    }
-    fetchMoreData=async()=>
+        setArticles(parsedData.articles)
+        setTotalResults(parsedData.totalResults)
+        props.setProgress(100);
+    });
+    const fetchMoreData=async()=>
 
     {
          
-        this.setState({page:this.state.page+1})
-         let url = `https://newsapi.org/v2/top-headlines?country=gb&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    setArticles({page:page+1})
+         let url = `https://newsapi.org/v2/top-headlines?country=gb&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
         let data = await fetch(url);
-          this.props.setProgress(30);
+          props.setProgress(30);
         console.log(data);
         let parsedData = await data.json();
         console.log(parsedData);
-          this.props.setProgress(50);
-        this.setState({
-            articles: this.state.articles.concat(parsedData.articles),
-            totalResults: parsedData.totalResults
-        })
-          this.props.setProgress(100);
+          props.setProgress(50);
+       
+        setArticles(articles.concat(parsedData.articles))
+          props.setProgress(100);
     }
-
-    render() {
-
-        return <div className="container">
+    return <div className="container">
            <InfiniteScroll
-           dataLength={this.state.articles.length}
-           next={this.fetchMoreData}
-           hasMore={this.state.articles.length!==this.state.totalResults}
+           dataLength={articles.length}
+           next={fetchMoreData}
+           hasMore={articles.length!==totalResults}
            />
             <div className="row row-cols-5">
-                {this.state.articles.map((element) => {
+                {articles.map((element) => {
                     return <div className="col" key={element.title}>
                         <h1>{element.category}</h1>
                          <NewsItems title={element.title} description={element.description} 
@@ -79,5 +56,4 @@ export default class extends Component {
                 })}
             </div>
         </div>;
-    }
 }

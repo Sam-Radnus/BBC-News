@@ -1,7 +1,7 @@
 import React, { Component,useState,useEffect } from 'react';
 import TopNews from './TopNews';
 import PropTypes from 'prop-types'
-import NewsItems from './NewsItems';
+import {NewsItems} from './NewsItems';
 import '../App.css';
 export const Sport=()=> {
     const [articles, setArticles] = useState([]);

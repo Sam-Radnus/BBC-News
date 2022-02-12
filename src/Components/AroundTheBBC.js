@@ -1,6 +1,6 @@
 import React, { Component,useState,useEffect } from 'react';
 import TopNews from './TopNews';
-import NewsItems from './NewsItems';
+import {NewsItems} from './NewsItems';
 import '../App.css';
 export const  AroundTheBBC =()=> {
     const [articles, setArticles] = useState([]);
