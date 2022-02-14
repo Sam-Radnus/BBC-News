@@ -7,7 +7,6 @@ export  const Navbar=()=> {
      
     let location = useLocation();
     React.useEffect(() => {
-    console.log(location);
     }, [location]);
         return <div>
             <nav style={{backgroundColor: "rgb(187,25,25)"}} className="navbar navbar-expand-lg navbar-dark ">

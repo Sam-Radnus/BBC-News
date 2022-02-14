@@ -18,11 +18,10 @@ export const News =(props)=> {
         let data = await fetch(url);
         let parsedData = await data.json();
         props.setProgress(70);
-        console.log(parsedData);
         setArticles(parsedData.articles)
         setTotalResults(parsedData.totalResults)
         props.setProgress(100);
-    });
+    },[]);
     const fetchMoreData=async()=>
 
     {
@@ -31,9 +30,8 @@ export const News =(props)=> {
          let url = `https://newsapi.org/v2/top-headlines?country=gb&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
         let data = await fetch(url);
           props.setProgress(30);
-        console.log(data);
+  
         let parsedData = await data.json();
-        console.log(parsedData);
           props.setProgress(50);
        
         setArticles(articles.concat(parsedData.articles))
