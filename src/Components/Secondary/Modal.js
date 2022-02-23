@@ -5,6 +5,7 @@ import Background from './umbrella.jpg'
 export default function Modal() {
     let floatStyle = {
         
+        width:'40vw'
     }
     let ModalStyle={
         position: 'absolute',
@@ -13,8 +14,8 @@ export default function Modal() {
          zIndex: '5',
          backgroundColor:'white',
          height:'fit-content',
-         width:'40vw',
-         padding:'50px'
+         width:'fit-content',
+         padding:'5vw'
     }
     return <div  style={{ backgroundImage: `url(${Background})`,height:'100vh',width:'98.79vw'}}>
          <div style={ModalStyle}>
@@ -30,8 +31,8 @@ export default function Modal() {
                     <label >Password</label>
                 </div>
             </form>
-            <button style={{width:'100%',color:'white',backgroundColor:'rgb(0,91,200)',border:'none',marginTop:'5px',padding:'10px'}}>Sign-In</button>
-            <h1 >Don't have a BBC Account</h1>
+            <button style={{width:'40vw',color:'white',backgroundColor:'rgb(0,91,200)',border:'none',marginTop:'5px',padding:'10px'}}>Sign-In</button>
+            <h1 className='my-3' >Don't have a BBC Account</h1>
             <Link style={{fontWeight:'700'}}to="/Sign-In">Register Now</Link>
         </div> 
     </div>;

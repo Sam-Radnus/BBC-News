@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../App.css';
 export default class Read extends Component {
     underLine=(e)=>
     {

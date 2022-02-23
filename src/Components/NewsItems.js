@@ -20,9 +20,9 @@ export const NewsItems =(props)=> {
     }
         let {title,description,imageURL,newsURL,author,date,source}=props;
         return <div style={myStyle}>
-            <a onMouseOver={underLine} onMouseOut={NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}> <img  height="130" width="50" src={imageURL} className="card-img-top" alt="..." /></a>
+            <a onMouseOver={underLine} onMouseOut={NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}> <img  height="160" width="50" src={imageURL} className="card-img-top" alt="..." /></a>
                 <div >
-                    <a onMouseOver={underLine} onMouseOut={NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}><h5 hover="true" className="card-title">{title}</h5></a>
+                    <a onMouseOver={underLine} onMouseOut={NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}><h5 hover="true" className="card-title my-2">{title}</h5></a>
                     {/* <p className="card-text">{description}</p> */}
                     <p><strong>Written By:-</strong>{author}on {new Date(date).toGMTString()}</p>
                 </div>

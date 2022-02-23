@@ -4,15 +4,15 @@ import PropTypes from 'prop-types'
 import {NewsItems} from './NewsItems';
 import '../App.css';
 export const Sport=()=> {
+    const API_KEY="2902e07919cb4e268ec388cc3f930a7e";
     const [articles, setArticles] = useState([]);
-    //   let  componentDidMount=async()=>
-    useEffect(async () => {
-        const url = "https://newsapi.org/v2/top-headlines?q=sports&country=gb&apiKey=a70c1839ba1c41c5b29461feee78b4af"
+    //   let  componentDidMount=async()= 
+    useEffect(async() => {
+        const url = `https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=${API_KEY}`
         let data = await fetch(url);
         let parsedData = await data.json();
-        console.log(parsedData);
         setArticles(parsedData.articles)
-    });
+    },[]);
     return  <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
                 <h1 id="line"><span>Sports</span></h1>
                     <div className="row"> {articles.slice(0,1).map((element)=>
