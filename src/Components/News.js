@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import PropTypes from 'prop-types'
-import { NewsItems } from './NewsItems';
+import  NewsItems  from './NewsItems';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import '../App.css';
 

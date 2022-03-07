@@ -4,7 +4,7 @@ import '../App.css';
 export const MostRead = () => {
 
    let i = 0;
-   const API_KEY="2902e07919cb4e268ec388cc3f930a7e"
+   const API_KEY="a70c1839ba1c41c5b29461feee78b4af"
     //let articles=[];
     const [articles, setArticles] = useState([]);
     //   let  componentDidMount=async()=>
