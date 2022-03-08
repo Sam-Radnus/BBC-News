@@ -5,12 +5,12 @@ import {Link } from 'react-router-dom';
 import '../App.css';
 export const TopNav =()=> {
         return <div>
-
-            <nav  id="topNav" className="navbar navbar-expand-lg navbar-light bg-light" >
-            <Link to="/"><img src={Photo} className="ms-4" height="40" width="120" alt="BBC" /></Link>
+          
+            <nav  id="topNav"  className="navbar navbar-expand-lg navbar-light bg-light" >
+            <Link style={{position:'absolute'}} to="/"><img  src={Photo} className="ms-4" height="40" width="120" alt="BBC" /></Link>
                 <div style={{height:'fit-content'}} className="container-fluid">
-                    <i className="fas fa-user-circle"></i>
-                    <Link style={{textDecoration:'none',color:'black',fontWeight:'700'}}to="/Sign-In">Sign in</Link>
+                   <div style={{marginLeft:'150px'}}  className="together"> <i className="fas fa-user-circle"></i>
+                    <Link style={{textDecoration:'none',color:'black',fontWeight:'700'}}to="/Sign-In">Sign in</Link></div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -44,7 +44,7 @@ export const TopNav =()=> {
 
                         </ul>
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{borderRadius:'0px',fontWeight:'700',backgroundColor:'rgb(228,228,228'}} />
+                            <input className="form-control me-2" type="search" placeholder="search" aria-label="Search" style={{height:'3px',padding:'20px 5px',borderRadius:'0px',fontWeight:'700',backgroundColor:'rgb(228,228,228'}} />
                             <button className='btn btn-danger' ><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                     </div>

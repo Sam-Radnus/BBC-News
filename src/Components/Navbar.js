@@ -9,7 +9,7 @@ export  const Navbar=()=> {
     React.useEffect(() => {
     }, [location]);
         return <div>
-            <nav style={{backgroundColor: "rgb(187,25,25)"}} className="navbar navbar-expand-lg navbar-dark ">
+            <nav style={{backgroundColor: "rgb(187,25,25)",width:"100%"}} className="navbar navbar-expand-lg navbar-dark ">
                 <div className="container-fluid">
                 {/* <img src={Photo} height="30" width="100" alt="BBC" /> */}
                     <h1 className="mx-3" style={{color:"white"}}>NEWS</h1>
