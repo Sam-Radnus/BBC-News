@@ -5,9 +5,9 @@ import TopNews from './TopNews';
 import '../App.css';
 
 export const Headlines =(props)=> {
-    //let articles=[];
+   
     const [articles, setArticles] = useState([]);
- //   let  componentDidMount=async()=>
+
     const API_KEY = process.env.REACT_APP_API_KEY;
     useEffect(async()=>{
     

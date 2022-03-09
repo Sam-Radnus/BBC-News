@@ -6,7 +6,7 @@ import '../App.css';
 export const Sport=()=> {
     const API_KEY = process.env.REACT_APP_API_KEY;
     const [articles, setArticles] = useState([]);
-    //   let  componentDidMount=async()= 
+   
     useEffect(async() => {
         const url = `https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=${API_KEY}`
         let data = await fetch(url);

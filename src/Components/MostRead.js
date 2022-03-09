@@ -5,11 +5,11 @@ export const MostRead = () => {
 
    let i = 0;
    const API_KEY = process.env.REACT_APP_API_KEY;
-    //let articles=[];
+   
     const [articles, setArticles] = useState([]);
     //   let  componentDidMount=async()=>
     useEffect(async() => {
-        //const url = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=a70c1839ba1c41c5b29461feee78b4af"
+       
         const url=`https://newsapi.org/v2/everything?q=apple&from=2022-02-13&to=2022-02-13&sortBy=relevancy&apiKey=${API_KEY}`;
         let data = await fetch(url);
         let parsedData = await data.json();

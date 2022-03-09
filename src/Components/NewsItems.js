@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import '../App.css'
 export default function NewsItems(props) {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 775);
-    {/* Performs similarly to componentDidMount in classes */}
+    
     useEffect(() => {
         window.addEventListener("resize", () => {
             const ismobile = window.innerWidth < 775;

@@ -11,7 +11,7 @@ export default function News(props)  {
   const [totalResults, setTotalResults] = useState(0);
   
   let i=1;
-  //   let  componentDidMount=async()=>
+ 
   const API_KEY = process.env.REACT_APP_API_KEY;
   useEffect(async () => {
     props.setProgress(10);

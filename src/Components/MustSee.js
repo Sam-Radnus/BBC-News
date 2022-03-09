@@ -5,9 +5,9 @@ import '../App.css';
 export const MustSee = () => {
     const API_KEY = process.env.REACT_APP_API_KEY;
     const [articles, setArticles] = useState([]);
-    //   let  componentDidMount=async()=> 
+   
     useEffect(async() => {
-       // const url = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=a70c1839ba1c41c5b29461feee78b4af"
+       
         const url=`https://newsapi.org/v2/everything?q=ukraine&sortBy=relevancy&apiKey=${API_KEY}`
         let data = await fetch(url);
         let parsedData = await data.json();
