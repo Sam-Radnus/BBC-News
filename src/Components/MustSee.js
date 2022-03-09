@@ -3,7 +3,7 @@ import TopNews from './TopNews';
 import NewsItems from './NewsItems';
 import '../App.css';
 export const MustSee = () => {
-    const API_KEY="a70c1839ba1c41c5b29461feee78b4af"
+    const API_KEY = process.env.REACT_APP_API_KEY;
     const [articles, setArticles] = useState([]);
     //   let  componentDidMount=async()=> 
     useEffect(async() => {
@@ -20,7 +20,7 @@ export const MustSee = () => {
             <div className="row"> {articles.slice(0, 1).map((element) => {
                 return <div className="col" key={element.title}>
                     <TopNews title={element.title} description={element.description}
-                        imageURL={element.urlToImage ? element.urlToImage : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"}
+                        imageURL={element.urlToImage ? element.urlToImage : "https://ichef.bbci.co.uk/images/ic/896x504/p07jbsw9.jpg"}
                         author={element.author ? element.author : "BBC News "} date={element.publishedAt} newsURL={element.url} />
                 </div>
             })}  </div>
@@ -29,7 +29,7 @@ export const MustSee = () => {
                 {articles.slice(1, 5).map((element) => {
                     return <div className="col-md-3" key={element.title} >
                         <NewsItems title={element.title} description={element.description}
-                            imageURL={element.urlToImage ? element.urlToImage : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"}
+                            imageURL={element.urlToImage ? element.urlToImage : "https://ichef.bbci.co.uk/images/ic/896x504/p07jbsw9.jpg"}
                             author={element.author ? element.author : "BBC News "} date={element.publishedAt} newsURL={element.url} />
                     </div>
                 })

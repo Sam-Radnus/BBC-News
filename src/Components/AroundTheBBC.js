@@ -4,10 +4,10 @@ import NewsItems from './NewsItems';
 import '../App.css';
 export const  AroundTheBBC =()=> {
     const [articles, setArticles] = useState([]);
-    const API_KEY = 'a70c1839ba1c41c5b29461feee78b4af';
+    const API_KEY = process.env.REACT_APP_API_KEY;
     //   let  componentDidMount=async()=> 
     useEffect(async() => {
-        console.log(window.innerWidth);
+    
         const url=`https://newsapi.org/v2/top-headlines?sources=bbc-news&sortBy=popularity&apiKey=${API_KEY}`;
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -21,7 +21,7 @@ export const  AroundTheBBC =()=> {
                           {
                             return <div className="col" key={element.title}>
                             <TopNews title={element.title} description={element.description} 
-                            imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
+                            imageURL={element.urlToImage?element.urlToImage:"https://ichef.bbci.co.uk/images/ic/896x504/p07jbsw9.jpg"} 
                             author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
                         </div>
                           })}  </div>
@@ -31,7 +31,7 @@ export const  AroundTheBBC =()=> {
                          { 
                              return <div  key={element.title} className="col-md-3">
                                  <NewsItems title={element.title} description={element.description} 
-                                 imageURL={element.urlToImage?element.urlToImage:"https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"} 
+                                 imageURL={element.urlToImage?element.urlToImage:"https://ichef.bbci.co.uk/images/ic/896x504/p07jbsw9.jpg"} 
                                  author={element.author?element.author:"BBC News "} date={element.publishedAt} newsURL={element.url}/>
                              </div>
                          })

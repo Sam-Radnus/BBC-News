@@ -10,7 +10,7 @@ import {FindUs} from './Components/FindUs';
 import Modal from './Components/Secondary/Modal';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import {News} from './Components/News';
+import News from './Components/News';
 import LoadingBar from 'react-top-loading-bar'
 export  const App =()=> {
   const pageSize = 10;
