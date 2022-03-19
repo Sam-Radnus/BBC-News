@@ -9,8 +9,7 @@ export const MostRead = () => {
     const [articles, setArticles] = useState([]);
     //   let  componentDidMount=async()=>
     useEffect(async() => {
-       
-        const url=`https://newsapi.org/v2/everything?q=apple&from=2022-02-13&to=2022-02-13&sortBy=relevancy&apiKey=${API_KEY}`;
+        const url=`https://newsapi.org/v2/top-headlines?q=UK&apiKey=2902e07919cb4e268ec388cc3f930a7e`;
         let data = await fetch(url);
         let parsedData = await data.json();
         setArticles(parsedData.articles)

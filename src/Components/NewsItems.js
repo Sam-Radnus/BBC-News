@@ -28,9 +28,9 @@ export default function NewsItems(props) {
     }
         let {title,description,imageURL,newsURL,author,date,source}=props;
        // return <div className="row" style={myStyle}>
-     return <div className={`${isMobile ? "row" : ""}`} style={myStyle}>
+     return <div className={`${isMobile ? "row my-1" : ""}`} style={myStyle}>
        
-            <div className="col sm-4" >
+            <div className="col sm-4 " >
                 <a onMouseOver={underLine} onMouseOut={NotUnderLine} style={{color:'black',textDecoration:'none'}} href={newsURL}> <img  height="160" width="50" src={imageURL} className="card-img-top" alt="..." /></a>
                 </div>
                 <div className="col sm-8" >

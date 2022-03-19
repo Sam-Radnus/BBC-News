@@ -17,7 +17,7 @@ export const Headlines =(props)=> {
         setArticles(parsedData.articles);
     },[]); 
         return <div style={{borderBottom:'solid',borderWidth:'1px',borderColor:'grey',marginBottom:'10px'}}className="container">
-                <h1 id="line"><span>Top Headlines</span></h1>
+                <h1 id="line my-2"><span>Top Headlines</span></h1>
                     <div className="row"> {articles.slice(0,1).map((element)=>
                           {
                             return <div className="col"  key={element.title} >

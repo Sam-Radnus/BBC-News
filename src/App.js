@@ -34,7 +34,7 @@ export  const App =()=> {
         <Route exact path="/" element={<>
                    <Headlines />
                    <MustSee />
-                   <MostRead />
+                   <MostRead /> 
                    <AroundTheBBC />
                    <Sport />
                    <FindUs />  </>   }>
